@@ -1,0 +1,396 @@
+fileFormatVersion: 2
+guid: 00d660f48217c874e82e8c2d459865dd
+ModelImporter:
+  serializedVersion: 20101
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Translucent_Glass_Gray
+    second: {fileID: 2100000, guid: 400ffec96625a8840ae6026be5966ca1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_0
+    second: {fileID: 2100000, guid: 707dddaff2c8e2442b92c2e54e4d4fb2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_1
+    second: {fileID: 2100000, guid: c2100ee90381db443953c10c3b8b2134, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_10
+    second: {fileID: 2100000, guid: 79937a5a96b2cc74bbd0ddacaec6ff0e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_11
+    second: {fileID: 2100000, guid: 878fee4804b36c744b297adcb1b0d759, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_12
+    second: {fileID: 2100000, guid: e19c46e7a86c4d6468cd1c0d0f9c1b0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_13
+    second: {fileID: 2100000, guid: 20da2273c20e6974caef1822478bc999, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_14
+    second: {fileID: 2100000, guid: c42d5b15c77e9484fbaa68536c5edf35, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_15
+    second: {fileID: 2100000, guid: 92ed23b8818e70d46af36e79ddc3a217, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_16
+    second: {fileID: 2100000, guid: 7c1072361373bc64598e1e8272f061b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_17
+    second: {fileID: 2100000, guid: 5f7934ae9066c6a46b0364f7f87f7bfd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_18
+    second: {fileID: 2100000, guid: 1242e0e80e8d46549a622fc06b53e620, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_19
+    second: {fileID: 2100000, guid: 82f54a6b698d15642aa7d601516539e7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_2
+    second: {fileID: 2100000, guid: b445e8a16c10a304faa36012e4334623, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_20
+    second: {fileID: 2100000, guid: cd40b52a6bb113b41b894056e1c4e886, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_21
+    second: {fileID: 2100000, guid: 9fa6994bebd867045bd5156e7d3e7b84, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_22
+    second: {fileID: 2100000, guid: 49030846187268248a23484593fc08db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_23
+    second: {fileID: 2100000, guid: 01463eedce46b29408308ce2f3ed2591, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_24
+    second: {fileID: 2100000, guid: 44bfbe84bfa20c64fb4bfd035f99d54d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_25
+    second: {fileID: 2100000, guid: a1089e1f617617944bef584624e131bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_26
+    second: {fileID: 2100000, guid: def35f3c10575534086baac6a11c2d0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_27
+    second: {fileID: 2100000, guid: bff7d0b398d462040abfac45b9a72de8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_28
+    second: {fileID: 2100000, guid: 6d00100df016e4442a1d416acfb67c0a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_29
+    second: {fileID: 2100000, guid: c2e8e1edb411a7d42a86bb6f4d5e5907, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_3
+    second: {fileID: 2100000, guid: 60cf34243174324429fc0fc196a807b3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_30
+    second: {fileID: 2100000, guid: 1381ce7545c4b7d4293b7d45a0f326b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_31
+    second: {fileID: 2100000, guid: 8e456d88133b51e4ca6aac060c48e939, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_32
+    second: {fileID: 2100000, guid: 479c2a2a016f029418a29be0220a3a85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_33
+    second: {fileID: 2100000, guid: de8e9e0fc85ec15448464a50db634002, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_35
+    second: {fileID: 2100000, guid: d6a65ff0029327e40a9e20178e46c9c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_36
+    second: {fileID: 2100000, guid: b6e78687f8a2e7c4387b8c694361ecb5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_37
+    second: {fileID: 2100000, guid: 29d96994d94a8974dbcea1f297e4e480, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_38
+    second: {fileID: 2100000, guid: 523bdf7c1e5640941b0c44f4a762c6c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_39
+    second: {fileID: 2100000, guid: d8f19d852faec8f4b91336ab29438006, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_4
+    second: {fileID: 2100000, guid: 8b6f5febb19fad84d8b55ba49f05f8e4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_40
+    second: {fileID: 2100000, guid: 923c566a2380eea498032188d949f2da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_41
+    second: {fileID: 2100000, guid: 99545114ba318614990aaab689ce0a09, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_42
+    second: {fileID: 2100000, guid: ad22cb11754764742913dc0b69e6229b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_43
+    second: {fileID: 2100000, guid: 8c4164568fa620549842c318036757c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_44
+    second: {fileID: 2100000, guid: 7553e41256576db45a3d9bcd69c0d5f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_45
+    second: {fileID: 2100000, guid: b9240e5c939aefa40a810eca8cb47ff6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_46
+    second: {fileID: 2100000, guid: ba8844aae5099de458164543ab733ef6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_47
+    second: {fileID: 2100000, guid: 8b59cef990fb15a408a69e40b84d7fb6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_48
+    second: {fileID: 2100000, guid: 012318f3ad679ad4aa469e74e3f55167, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_49
+    second: {fileID: 2100000, guid: bec1f99030d64794ab64c1dc1709e220, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_50
+    second: {fileID: 2100000, guid: 44dc539c58f26ae4b931bbca1ae28a67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_51
+    second: {fileID: 2100000, guid: eb5802a45b396024798dc68ae843c0fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_52
+    second: {fileID: 2100000, guid: f73be54d4a541a64aa8478eba7d99c74, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_53
+    second: {fileID: 2100000, guid: d4a27759090202c469fd402b3121f7e4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_54
+    second: {fileID: 2100000, guid: 1d3ed7f5a9817494c9fb77ab85582ddf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_55
+    second: {fileID: 2100000, guid: 246b65719c41f6c468985341091cbb85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_56
+    second: {fileID: 2100000, guid: 2bceb86a6bc62ba409d971f57a129ec5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_57
+    second: {fileID: 2100000, guid: f19e6d0164656cc428f5386ab51fb3e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_6
+    second: {fileID: 2100000, guid: c9f522cecfd569046bb5bbd6e1d0905f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_7
+    second: {fileID: 2100000, guid: 6300cb564ab695b4e866988e65486046, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_8
+    second: {fileID: 2100000, guid: 33b5fecd17c344842a60700acb690188, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dust2_material_9
+    second: {fileID: 2100000, guid: 1679514b75e26fd4d95b5f5eda948116, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: material
+    second: {fileID: 2100000, guid: 0e12da6fe85d29d42a22025d2a471171, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: material_0
+    second: {fileID: 2100000, guid: c59f1410a412227418ba355d98e6d26e, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
