@@ -15,3 +15,4 @@ Kristijonas | General LD and TA tasks
 ## Links
 * [Idea registry](https://idea-registry.cds.unity3d.com/event/scenario-test-week-2020-2)
 * [Discord server](https://discord.gg/kCgDSA)
+* [Style guide document](https://docs.google.com/document/d/1FPShqg05ZCJTVB5O7MSkSUmgP6bn_2Lc_xSWUeDS4fI/edit?usp=sharing)
