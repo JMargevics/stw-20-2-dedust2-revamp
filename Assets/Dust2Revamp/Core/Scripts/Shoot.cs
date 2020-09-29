@@ -18,10 +18,12 @@ public class Shoot : MonoBehaviour
     //private AudioSource gunAudio;
     private float nextFire;
 
+    public AudioClip shoot;
+    public AudioClip reload;
+
     void Start()
     {
         playerManager = GetComponent<PlayerManager>();
-        //gunAudio = GetComponent<AudioSource>();
     }
 
 
@@ -29,6 +31,8 @@ public class Shoot : MonoBehaviour
     {
         if (Input.GetButton("Fire1") && Time.time > nextFire)
         {
+            playerManager.audioSource.clip = shoot;
+            playerManager.audioSource.Play();
             playerManager.animator.SetTrigger("Shoot");
 
             nextFire = Time.time + fireRate;
