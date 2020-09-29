@@ -1,28 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-3201131454215516719
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d7593b3a9277ac4696b20006c21dde2, type: 3}
-  m_Name: VisualEnvironment
-  m_EditorClassIdentifier: 
-  active: 1
-  m_AdvancedMode: 0
-  skyType:
-    m_OverrideState: 1
-    m_Value: 0
-  skyAmbientMode:
-    m_OverrideState: 0
-    m_Value: 0
-  fogType:
-    m_OverrideState: 0
-    m_Value: 0
 --- !u!114 &-452440329753090702
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -47,10 +24,10 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 1
   fixedExposure:
-    m_OverrideState: 0
-    m_Value: 0
-  compensation:
     m_OverrideState: 1
+    m_Value: 12.8
+  compensation:
+    m_OverrideState: 0
     m_Value: 1
   limitMin:
     m_OverrideState: 0
@@ -151,7 +128,7 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: {fileID: 0}
   histogramPercentages:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {x: 40, y: 90}
     min: 0
     max: 100
@@ -193,11 +170,11 @@ MonoBehaviour:
   m_Name: Day
   m_EditorClassIdentifier: 
   components:
-  - {fileID: -3201131454215516719}
   - {fileID: 6108938022129134099}
   - {fileID: -452440329753090702}
   - {fileID: 8759599094915726923}
   - {fileID: 4271170336951898706}
+  - {fileID: 4499902625070223344}
 --- !u!114 &4271170336951898706
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -222,7 +199,7 @@ MonoBehaviour:
     m_Value: 0
   exposure:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 10
   multiplier:
     m_OverrideState: 0
     m_Value: 1
@@ -268,6 +245,29 @@ MonoBehaviour:
   gradientDiffusion:
     m_OverrideState: 0
     m_Value: 1
+--- !u!114 &4499902625070223344
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d7593b3a9277ac4696b20006c21dde2, type: 3}
+  m_Name: VisualEnvironment
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  skyType:
+    m_OverrideState: 1
+    m_Value: 4
+  skyAmbientMode:
+    m_OverrideState: 0
+    m_Value: 0
+  fogType:
+    m_OverrideState: 0
+    m_Value: 0
 --- !u!114 &6108938022129134099
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -280,7 +280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d877ec3e844f2ca46830012e8e79319b, type: 3}
   m_Name: PhysicallyBasedSky
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
   rotation:
     m_OverrideState: 0
@@ -385,7 +385,7 @@ MonoBehaviour:
     max: 10
   groundTint:
     m_OverrideState: 1
-    m_Value: {r: 0.20906019, g: 0.29347, b: 0.509434, a: 1}
+    m_Value: {r: 0.3786935, g: 0.38519573, b: 0.4339623, a: 1}
     hdr: 0
     showAlpha: 0
     showEyeDropper: 0
@@ -456,7 +456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b6606ef2548734bb6d11b9d160bc7e, type: 3}
   m_Name: HDRISky
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
   rotation:
     m_OverrideState: 0
@@ -468,7 +468,7 @@ MonoBehaviour:
     m_Value: 0
   exposure:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 10
   multiplier:
     m_OverrideState: 0
     m_Value: 1
