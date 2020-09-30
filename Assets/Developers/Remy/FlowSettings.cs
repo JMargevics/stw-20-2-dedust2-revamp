@@ -20,6 +20,8 @@ public class FlowSettings : MonoBehaviour
     public float globalMultiplier = 1f;
     [Range(0, 1)]
     public float velocityMultiplier = 1f;
+    [Range(0, 1)]
+    public float flowToSideFactor = 0f;
 
     private void OnValidate()
     {
@@ -47,6 +49,7 @@ public class FlowSettings : MonoBehaviour
         mpb.SetVector("_Value", value);
         mpb.SetFloat("_GlobalMultiplier", globalMultiplier);
         mpb.SetFloat("_VelocityMultiplier", velocityMultiplier);
+        mpb.SetFloat("_FlowToSideFactor", flowToSideFactor);
 
         GetComponent<Renderer>().SetPropertyBlock(mpb);
     }
