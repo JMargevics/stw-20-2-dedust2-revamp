@@ -43,7 +43,7 @@ Material:
     - _DoubleSidedNormalMode: 2
     - _DstBlend: 10
     - _EnableFogOnTransparent: 1
-    - _FlowToSideFactor: 0.143
+    - _FlowToSideFactor: 0.308
     - _ForcedValue: 0
     - _GlobalMultiplier: 1
     - _In: 0.749
