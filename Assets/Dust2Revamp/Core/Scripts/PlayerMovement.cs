@@ -2,11 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(PlayerManager))]
 public class PlayerMovement : MonoBehaviour
 {
+    PlayerManager playerManager;
     public CharacterController controller;
 
-    public float speed = 12f;
+    float speed;
+    public float runSpeed = 24f;
+    public float walkSpeed = 12f;
+
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
 
@@ -17,8 +22,29 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
 
+    Vector3 oldPos;
+
+    private void Start()
+    {
+        playerManager = GetComponent<PlayerManager>();
+        oldPos = transform.position;
+    }
+
     void Update()
     {
+        if (Input.GetKey(KeyCode.LeftShift) && isGrounded)
+        {
+            speed = runSpeed;
+            playerManager.animator.SetBool("Run", true);
+            playerManager.animator.SetBool("Walk", false);
+        }
+        else
+        {
+            speed = walkSpeed;
+            playerManager.animator.SetBool("Run", false);
+            playerManager.animator.SetBool("Walk", true);
+        }
+
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if(isGrounded && velocity.y < 0)
@@ -29,11 +55,20 @@ public class PlayerMovement : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
+        if(oldPos == transform.position)
+        {
+            playerManager.animator.SetBool("Walk", false);
+            playerManager.animator.SetBool("Run", false);
+            playerManager.animator.SetBool("Idle", true);
+        }
+
+        oldPos = transform.position;
+
         Vector3 move = transform.right * x + transform.forward * z;
 
         controller.Move(move * speed * Time.deltaTime);
 
-        if(Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight *-2f * gravity);
         }
@@ -41,7 +76,5 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
-
-        Debug.Log("velocity.y: " + velocity.y + " gravity: " + gravity);
     }
 }
