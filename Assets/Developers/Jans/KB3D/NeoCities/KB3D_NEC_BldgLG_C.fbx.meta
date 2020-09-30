@@ -1,14 +1,59 @@
 fileFormatVersion: 2
 guid: 130491d5b74838946ab577dfce8ab9ee
 ModelImporter:
-  serializedVersion: 19300
+  serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KB3D_NEC_BannerA
+    second: {fileID: 2100000, guid: 872a92656e6abc94d92256a781040cbb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KB3D_NEC_ConcreteA
+    second: {fileID: 2100000, guid: 043876dd9e3fe2540b509f16d204c22d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KB3D_NEC_ConcreteB
+    second: {fileID: 2100000, guid: d151e03df289e8a4eb071759fea8024e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KB3D_NEC_GlassBlack
+    second: {fileID: 2100000, guid: 1ea0c1b47f4c10443957688c50e08c3f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KB3D_NEC_MetalAccent
+    second: {fileID: 2100000, guid: 548b7e8d35fcf8944b045bd75223f1d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KB3D_NEC_MetalGrating
+    second: {fileID: 2100000, guid: 95722f46acb051146842c74b11f69401, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KB3D_NEC_OxidizedSteel
+    second: {fileID: 2100000, guid: 08777be1a7a534d488ba2a61ef1b71de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KB3D_NEC_PaintedMetal
+    second: {fileID: 2100000, guid: 96ed653a7e4435247b2ddb11aaf75b6f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KB3D_NEC_SatinSteel
+    second: {fileID: 2100000, guid: c8e21ccf45d51d54e846e7b5583e161b, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
-    materialSearch: 1
-    materialLocation: 0
+    materialSearch: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -43,11 +88,13 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
     skinWeightsMode: 0
     maxBonesPerVertex: 4
@@ -57,6 +104,9 @@ ModelImporter:
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
