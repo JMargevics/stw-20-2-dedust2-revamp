@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 [RequireComponent(typeof(PlayerManager))]
 public class Shoot : MonoBehaviour
@@ -12,16 +13,23 @@ public class Shoot : MonoBehaviour
     public float weaponRange = 50f;
     public float hitForce = 100f;
     public Transform gunEnd;
+    private Light muzzleLight;
 
     public Camera fpsCam;
     private WaitForSeconds shotDuration = new WaitForSeconds(0.07f);
     //private AudioSource gunAudio;
     private float nextFire;
 
+    public AudioClip shoot;
+    public AudioClip reload;
+
+    public VisualEffect muzzleFlash;
+
     void Start()
     {
         playerManager = GetComponent<PlayerManager>();
-        //gunAudio = GetComponent<AudioSource>();
+        muzzleLight = gunEnd.GetComponent<Light>();
+        muzzleLight.enabled = false;
     }
 
 
@@ -29,7 +37,6 @@ public class Shoot : MonoBehaviour
     {
         if (Input.GetButton("Fire1") && Time.time > nextFire)
         {
-            playerManager.animator.SetTrigger("Shoot");
 
             nextFire = Time.time + fireRate;
 
@@ -57,7 +64,7 @@ public class Shoot : MonoBehaviour
                 {
                     hit.rigidbody.AddForce(-hit.normal * hitForce);
                 }
-                if(hit.transform.gameObject)
+                if (hit.transform.gameObject)
                 {
 
                 }
@@ -70,8 +77,15 @@ public class Shoot : MonoBehaviour
 
     private IEnumerator ShotEffect()
     {
-        //gunAudio.Play();
+        muzzleFlash.Play();
+        muzzleLight.enabled = true;
+        playerManager.animator.SetTrigger("Shoot");
+        playerManager.audioSource.clip = shoot;
+        playerManager.audioSource.Play();
 
         yield return shotDuration;
+
+        yield return new WaitForSeconds(0.005f);
+        muzzleLight.enabled = false;
     }
 }
