@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 4780.837, g: 4597.1875, b: 5076.91, a: 1}
+  m_IndirectSpecularColor: {r: 5172.918, g: 5359.801, b: 7179.0703, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8883,14 +8883,6 @@ PrefabInstance:
     - target: {fileID: 562797964422351397, guid: 1c30a08e577ad4549a83565d3e71d729, type: 3}
       propertyPath: m_Name
       value: First Person Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 562797964422351400, guid: 1c30a08e577ad4549a83565d3e71d729, type: 3}
-      propertyPath: runSpeed
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 562797964422351400, guid: 1c30a08e577ad4549a83565d3e71d729, type: 3}
-      propertyPath: walkSpeed
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 562797964422351403, guid: 1c30a08e577ad4549a83565d3e71d729, type: 3}
       propertyPath: m_LocalPosition.x
