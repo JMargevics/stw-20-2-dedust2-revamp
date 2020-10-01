@@ -1,14 +1,79 @@
 fileFormatVersion: 2
 guid: 7b48f3b954d89164eb9310f3bb151d8a
 ModelImporter:
-  serializedVersion: 19300
+  serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KB3D_NEC_AirCon
+    second: {fileID: 2100000, guid: 0b359c066f7ca1848963fbb541342291, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KB3D_NEC_DarkPanels
+    second: {fileID: 2100000, guid: 091ac59e348f01543887421292a28725, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KB3D_NEC_DecorConcreteB
+    second: {fileID: 2100000, guid: 2d9fe8b99f8b79c4791e7a752a01f57a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KB3D_NEC_GalvanizedSteelDirt
+    second: {fileID: 2100000, guid: 63a94bec6e1fbc1448413b63f0ec4d18, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KB3D_NEC_GlassBlack
+    second: {fileID: 2100000, guid: 1ea0c1b47f4c10443957688c50e08c3f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KB3D_NEC_GlassLamps
+    second: {fileID: 2100000, guid: 2477a524148476b4d985aceef83f10f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KB3D_NEC_GlassTinted
+    second: {fileID: 2100000, guid: e1e496ebabc66a542bf5577e927db50c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KB3D_NEC_MetalLightGreyWorn
+    second: {fileID: 2100000, guid: bc98715ddccb71747bd9b1ba21f67e9e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KB3D_NEC_MetalPaintRed
+    second: {fileID: 2100000, guid: b1260c43b0ed5fe48a8a2f49791ed061, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KB3D_NEC_MetalPaintWhiteWorn
+    second: {fileID: 2100000, guid: 8709e0a9a82b35547a8ad555fb216df0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KB3D_NEC_MetalPaintWorn
+    second: {fileID: 2100000, guid: 6c496a272c8f7674f8081063ebf72aaa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KB3D_NEC_MetalPaintYellow
+    second: {fileID: 2100000, guid: 3da9bf9b35b5ae34d853ad71fc52ceb9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KB3D_NEC_TarpA
+    second: {fileID: 2100000, guid: f0d469634d5d4f94bb88b84c0c7130df, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -43,11 +108,13 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
     skinWeightsMode: 0
     maxBonesPerVertex: 4
@@ -57,6 +124,9 @@ ModelImporter:
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
