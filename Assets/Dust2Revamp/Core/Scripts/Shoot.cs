@@ -99,6 +99,7 @@ public class Shoot : MonoBehaviour
     private void BulletImpact(RaycastHit hit)
     {
         var impactDecal = Instantiate(bulletImpactDecal, hit.point, Quaternion.FromToRotation(Vector3.forward * (-1), hit.normal));
+        impactDecal.transform.parent = hit.collider.gameObject.transform;
         DecalProjector impactProjector = impactDecal.GetComponentInChildren<DecalProjector>();
         int randomImpact = Random.Range(0, 4);
         if (randomImpact == 0)
