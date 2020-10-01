@@ -92,7 +92,7 @@ public class Shoot : MonoBehaviour
 
         yield return shotDuration;
 
-        yield return new WaitForSeconds(0.005f);
+        yield return new WaitForSeconds(0.05f);
         muzzleLight.enabled = false;
     }
 
