@@ -11,7 +11,7 @@ public class Shoot : MonoBehaviour
 
     public int gunDamage = 1;
     public float fireRate = 0.25f;
-    public float weaponRange = 50f;
+    public float weaponRange = 5000f;
     public float hitForce = 100f;
     public Transform gunEnd;
     private Light muzzleLight;
@@ -53,9 +53,9 @@ public class Shoot : MonoBehaviour
 
 
             RaycastHit hit;
+            LayerMask layerMask = 1 << 0;
 
-
-            if (Physics.Raycast(rayOrigin, fpsCam.transform.forward, out hit, weaponRange))
+            if (Physics.Raycast(rayOrigin, fpsCam.transform.forward, out hit, weaponRange, layerMask))
             {
                 //ShootableBox health = hit.collider.GetComponent<ShootableBox>();
 
@@ -71,6 +71,7 @@ public class Shoot : MonoBehaviour
                 }
                 if (hit.transform.gameObject)
                 {
+                    Debug.Log(hit.transform.gameObject);
                     BulletImpact(hit);
                 }
 

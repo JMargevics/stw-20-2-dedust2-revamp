@@ -517,6 +517,8 @@ MonoBehaviour:
   shoot: {fileID: 8300000, guid: d704c3d6126995f43ba1be4291a7ef40, type: 3}
   reload: {fileID: 8300000, guid: 09c1fca24fba9e541bcb69d21349d473, type: 3}
   muzzleFlash: {fileID: 1804563467}
+  bulletImpactDecal: {fileID: 4411420222711605879, guid: 5aae1d9dd4c72cc418821c1691fd6677, type: 3}
+  maxDecals: 100
 --- !u!114 &415501060869456058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -669,7 +671,6 @@ GameObject:
   m_Component:
   - component: {fileID: 562797965039618604}
   - component: {fileID: 562797965039618608}
-  - component: {fileID: 562797965039618611}
   - component: {fileID: 562797965039618610}
   - component: {fileID: 562797965039618605}
   m_Layer: 8
@@ -738,14 +739,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &562797965039618611
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 562797965039618607}
-  m_Enabled: 1
 --- !u!114 &562797965039618610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1152,7 +1145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1638721625384478117, guid: e755cb3d51f072b4cb1a5605c3019acd, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1638721625384478119, guid: e755cb3d51f072b4cb1a5605c3019acd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1212,7 +1205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1638721625384478123, guid: e755cb3d51f072b4cb1a5605c3019acd, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1638721625384478127, guid: e755cb3d51f072b4cb1a5605c3019acd, type: 3}
       propertyPath: m_RootOrder
