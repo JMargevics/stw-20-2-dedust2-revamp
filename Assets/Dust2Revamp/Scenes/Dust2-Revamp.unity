@@ -1198,6 +1198,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Corner Revamp
       objectReference: {fileID: 0}
+    - target: {fileID: 5273053992737515433, guid: 7cb39e9c455967040a82d2c466d09bce, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e23d91a6eea362547bd702a7c3836362, type: 2}
+    - target: {fileID: 7052195827265234829, guid: 7cb39e9c455967040a82d2c466d09bce, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 65f81f238d298504a8a53985f43e942f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cb39e9c455967040a82d2c466d09bce, type: 3}
 --- !u!1001 &8933813318917311750
