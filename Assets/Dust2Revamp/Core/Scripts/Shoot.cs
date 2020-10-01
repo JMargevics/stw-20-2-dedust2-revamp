@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.HighDefinition;
 using UnityEngine.VFX;
 
 [RequireComponent(typeof(PlayerManager))]
@@ -24,6 +25,10 @@ public class Shoot : MonoBehaviour
     public AudioClip reload;
 
     public VisualEffect muzzleFlash;
+    public GameObject bulletImpactDecal;
+    private List<GameObject> impactDecals = new List<GameObject>();
+    private int shotsFired = 0;
+    public int maxDecals = 100;
 
     void Start()
     {
@@ -66,7 +71,7 @@ public class Shoot : MonoBehaviour
                 }
                 if (hit.transform.gameObject)
                 {
-
+                    BulletImpact(hit);
                 }
 
                 Debug.DrawRay(rayOrigin, fpsCam.transform.forward);
@@ -77,6 +82,7 @@ public class Shoot : MonoBehaviour
 
     private IEnumerator ShotEffect()
     {
+        
         muzzleFlash.Play();
         muzzleLight.enabled = true;
         playerManager.animator.SetTrigger("Shoot");
@@ -87,5 +93,30 @@ public class Shoot : MonoBehaviour
 
         yield return new WaitForSeconds(0.005f);
         muzzleLight.enabled = false;
+    }
+
+    private void BulletImpact(RaycastHit hit)
+    {
+        var impactDecal = Instantiate(bulletImpactDecal, hit.point, Quaternion.FromToRotation(Vector3.forward * (-1), hit.normal));
+        DecalProjector impactProjector = impactDecal.GetComponentInChildren<DecalProjector>();
+        int randomImpact = Random.Range(0, 4);
+        if (randomImpact == 0)
+            impactProjector.uvBias = new Vector2(0, 0);
+        else if (randomImpact == 1)
+            impactProjector.uvBias = new Vector2(0.5f, 0);
+        else if (randomImpact == 2)
+            impactProjector.uvBias = new Vector2(0, 0.5f);
+        else if (randomImpact == 3)
+            impactProjector.uvBias = new Vector2(0.5f, 0.5f);
+
+
+        impactDecals.Add(impactDecal);
+        shotsFired++;
+
+        if(shotsFired >= maxDecals)
+        {
+            Destroy(impactDecals[0]);
+            impactDecals.RemoveAt(0);
+        }
     }
 }
