@@ -30,6 +30,8 @@ public class Shoot : MonoBehaviour
     private int shotsFired = 0;
     public int maxDecals = 100;
 
+    public GameObject barrelVfx;
+
     void Start()
     {
         playerManager = GetComponent<PlayerManager>();
@@ -98,6 +100,13 @@ public class Shoot : MonoBehaviour
 
     private void BulletImpact(RaycastHit hit)
     {
+
+        if(hit.transform.gameObject.tag == "Barrel")
+        {
+            Debug.Log("barrel");
+            Instantiate(barrelVfx, hit.point, Quaternion.FromToRotation(Vector3.forward * (-1), hit.normal));
+        }
+
         var impactDecal = Instantiate(bulletImpactDecal, hit.point, Quaternion.FromToRotation(Vector3.forward * (-1), hit.normal));
         impactDecal.transform.parent = hit.collider.gameObject.transform;
         DecalProjector impactProjector = impactDecal.GetComponentInChildren<DecalProjector>();
