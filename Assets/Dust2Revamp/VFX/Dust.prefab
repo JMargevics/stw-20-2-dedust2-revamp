@@ -63,11 +63,23 @@ VisualEffect:
     m_Vector3f:
       m_Array: []
     m_Vector4f:
-      m_Array: []
+      m_Array:
+      - m_Value: {x: 0.9622642, y: 0.9622642, z: 0.9622642, w: 0.050980393}
+        m_Name: Dust Color Top
+        m_Overridden: 1
+      - m_Value: {x: 0.5283019, y: 0.40506166, z: 0.23175506, w: 0.46666667}
+        m_Name: Dust Color Down
+        m_Overridden: 1
     m_Uint:
       m_Array: []
     m_Int:
-      m_Array: []
+      m_Array:
+      - m_Value: 15
+        m_Name: Dust Particles Count
+        m_Overridden: 1
+      - m_Value: 1
+        m_Name: Paper Particles Count
+        m_Overridden: 1
     m_Matrix4x4f:
       m_Array: []
     m_AnimationCurve:
@@ -106,6 +118,9 @@ VFXRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   m_StaticBatchInfo:
