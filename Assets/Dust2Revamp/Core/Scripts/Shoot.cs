@@ -26,8 +26,11 @@ public class Shoot : MonoBehaviour
 
     public VisualEffect muzzleFlash;
     public GameObject bulletImpactDecal;
+    public Vector2Int impactDecalTiles = new Vector2Int(2, 2);
     private List<GameObject> impactDecals = new List<GameObject>();
+    private int availableDecalIndex = 0;
     private int shotsFired = 0;
+    private Transform impactDecalsParent;
     public int maxDecals = 100;
 
     public GameObject barrelVfx;
@@ -37,6 +40,7 @@ public class Shoot : MonoBehaviour
         playerManager = GetComponent<PlayerManager>();
         muzzleLight = gunEnd.GetComponent<Light>();
         muzzleLight.enabled = false;
+        impactDecalsParent = new GameObject("Impact Decals").transform;
     }
 
 
@@ -107,27 +111,21 @@ public class Shoot : MonoBehaviour
             Instantiate(barrelVfx, hit.point, Quaternion.FromToRotation(Vector3.forward * (-1), hit.normal));
         }
 
-        var impactDecal = Instantiate(bulletImpactDecal, hit.point, Quaternion.FromToRotation(Vector3.forward * (-1), hit.normal));
-        impactDecal.transform.parent = hit.collider.gameObject.transform;
+        if (impactDecals.Count < maxDecals)
+            impactDecals.Add(Instantiate(bulletImpactDecal));
+
+        var impactDecal = impactDecals[availableDecalIndex];
+
+        impactDecal.transform.position = hit.point;
+        impactDecal.transform.rotation = Quaternion.FromToRotation(Vector3.forward * (-1), hit.normal);
+        impactDecal.transform.parent = impactDecalsParent;
         DecalProjector impactProjector = impactDecal.GetComponentInChildren<DecalProjector>();
-        int randomImpact = Random.Range(0, 4);
-        if (randomImpact == 0)
-            impactProjector.uvBias = new Vector2(0, 0);
-        else if (randomImpact == 1)
-            impactProjector.uvBias = new Vector2(0.5f, 0);
-        else if (randomImpact == 2)
-            impactProjector.uvBias = new Vector2(0, 0.5f);
-        else if (randomImpact == 3)
-            impactProjector.uvBias = new Vector2(0.5f, 0.5f);
 
+        impactProjector.uvBias = new Vector2(
+            Random.Range(0, impactDecalTiles.x) * 1.0f / impactDecalTiles.x,
+            Random.Range(0, impactDecalTiles.y) * 1.0f / impactDecalTiles.y
+            );
 
-        impactDecals.Add(impactDecal);
-        shotsFired++;
-
-        if(shotsFired >= maxDecals)
-        {
-            Destroy(impactDecals[0]);
-            impactDecals.RemoveAt(0);
-        }
+        availableDecalIndex = (availableDecalIndex + 1) % maxDecals;
     }
 }
