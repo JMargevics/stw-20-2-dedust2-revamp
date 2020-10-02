@@ -519,6 +519,7 @@ MonoBehaviour:
   muzzleFlash: {fileID: 1804563467}
   bulletImpactDecal: {fileID: 4411420222711605879, guid: 5aae1d9dd4c72cc418821c1691fd6677, type: 3}
   maxDecals: 100
+  barrelVfx: {fileID: 6441032921730478885, guid: 42481a5dc6d24a947820ece02ccd5af5, type: 3}
 --- !u!114 &415501060869456058
 MonoBehaviour:
   m_ObjectHideFlags: 0
