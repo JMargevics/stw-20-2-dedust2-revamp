@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MLAPI;
 
-public class Sway : MonoBehaviour
+public class Sway : NetworkedBehaviour
 {
     public float intensity;
     public float smooth;
@@ -17,7 +18,8 @@ public class Sway : MonoBehaviour
     }
     void Update()
     {
-        UpdateSway();
+        if(IsLocalPlayer)
+            UpdateSway();
     }
 
     private void UpdateSway()

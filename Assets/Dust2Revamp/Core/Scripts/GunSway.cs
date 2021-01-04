@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using MLAPI;
 
-public class GunSway : MonoBehaviour
+public class GunSway : NetworkedBehaviour
 {
     PlayerManager playerManger;
 
@@ -26,6 +27,7 @@ public class GunSway : MonoBehaviour
         //playerManger.gun.transform.position = playerManger.weaponSlot.transform.position;
         //playerManger.gun.transform.rotation = playerManger.weaponSlot.transform.rotation;
 
-        playerManger.gun.transform.position = Vector3.MoveTowards(playerManger.gun.transform.position, playerManger.weaponSlot.transform.position, swaySpeed);
+        if(IsLocalPlayer)
+            playerManger.gun.transform.position = Vector3.MoveTowards(playerManger.gun.transform.position, playerManger.weaponSlot.transform.position, swaySpeed);
     }
 }

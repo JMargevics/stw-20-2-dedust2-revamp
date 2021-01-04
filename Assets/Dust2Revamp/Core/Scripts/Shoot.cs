@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.HighDefinition;
 using UnityEngine.VFX;
+using MLAPI;
+using MLAPI.NetworkedVar;
+using MLAPI.Messaging;
 
 [RequireComponent(typeof(PlayerManager))]
-public class Shoot : MonoBehaviour
+public class Shoot : NetworkedBehaviour
 {
     PlayerManager playerManager;
 
@@ -46,59 +49,94 @@ public class Shoot : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButton("Fire1") && Time.time > nextFire)
+        if (IsLocalPlayer)
         {
-
-            nextFire = Time.time + fireRate;
-
-
-            StartCoroutine(ShotEffect());
-
-
-            Vector3 rayOrigin = fpsCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.0f));
-
-
-            RaycastHit hit;
-            LayerMask layerMask = 1 << 0;
-
-            if (Physics.Raycast(rayOrigin, fpsCam.transform.forward, out hit, weaponRange, layerMask))
+            if (Input.GetButton("Fire1") && Time.time > nextFire)
             {
-                //ShootableBox health = hit.collider.GetComponent<ShootableBox>();
+
+                nextFire = Time.time + fireRate;
 
 
-                //if (health != null)
-                //{
-                //    health.Damage(gunDamage);
-                //}
+                StartCoroutine(ShotEffect());
 
-                if (hit.rigidbody != null)
+
+                Vector3 rayOrigin = fpsCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.0f));
+
+
+                RaycastHit hit;
+                LayerMask layerMask = 1 << 0;
+
+                if (Physics.Raycast(rayOrigin, fpsCam.transform.forward, out hit, weaponRange, layerMask))
                 {
-                    hit.rigidbody.AddForce(-hit.normal * hitForce);
-                }
-                if (hit.transform.gameObject)
-                {
-                    Debug.Log(hit.transform.gameObject);
-                    BulletImpact(hit);
-                }
+                    //ShootableBox health = hit.collider.GetComponent<ShootableBox>();
 
-                Debug.DrawRay(rayOrigin, fpsCam.transform.forward);
+
+                    //if (health != null)
+                    //{
+                    //    health.Damage(gunDamage);
+                    //}
+
+                    if (hit.rigidbody != null)
+                    {
+                        hit.rigidbody.AddForce(-hit.normal * hitForce);
+                    }
+                    if (hit.transform.gameObject)
+                    {
+                        Debug.Log(hit.transform.gameObject);
+                        BulletImpact(hit);
+                    }
+
+                    Debug.DrawRay(rayOrigin, fpsCam.transform.forward);
+                }
             }
-        }
+        }    
     }
-
 
     private IEnumerator ShotEffect()
     {
-        
+        if (IsServer)
+            InvokeClientRpcOnEveryone(EffectStartRPC);
+        else
+        {
+            InvokeServerRpc(ServerEffectStartRPC);
+        }
+
+        yield return shotDuration;
+
+        yield return new WaitForSeconds(0.05f);
+
+        if(IsServer)
+            InvokeClientRpcOnEveryone(EffectEndRPC);
+        else
+        {
+            InvokeServerRpc(ServerEffectEndRPC);
+        }
+    }
+
+    [ServerRPC]
+    void ServerEffectStartRPC()
+    {
+        InvokeClientRpcOnEveryone(EffectStartRPC);
+    }
+    [ServerRPC]
+    void ServerEffectEndRPC()
+    {
+        InvokeClientRpcOnEveryone(EffectEndRPC);
+    }
+    [ClientRPC]
+    void EffectStartRPC()
+    {
+        Debug.Log("effect start");
         muzzleFlash.Play();
         muzzleLight.enabled = true;
         playerManager.animator.SetTrigger("Shoot");
         playerManager.audioSource.clip = shoot;
         playerManager.audioSource.Play();
-
-        yield return shotDuration;
-
-        yield return new WaitForSeconds(0.05f);
+    }
+    [ClientRPC]
+    void EffectEndRPC()
+    {
+        Debug.Log("effect end");
         muzzleLight.enabled = false;
     }
 
