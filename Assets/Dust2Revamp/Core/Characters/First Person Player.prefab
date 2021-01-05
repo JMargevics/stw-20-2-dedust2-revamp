@@ -830,7 +830,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562797964422351397}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.6, y: 8.190004, z: -11.09}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.35911554, y: 0.35911554, z: 0.35911554}
   m_Children:
   - {fileID: 562797964765500245}
@@ -897,7 +897,7 @@ MonoBehaviour:
   gunDamage: 1
   fireRate: 0.1
   weaponRange: 50
-  hitForce: 100
+  hitForce: 150
   gunEnd: {fileID: 3810468051371372030}
   fpsCam: {fileID: 1093489426}
   shoot: {fileID: 8300000, guid: d704c3d6126995f43ba1be4291a7ef40, type: 3}
@@ -1772,7 +1772,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1638721625384478117, guid: e755cb3d51f072b4cb1a5605c3019acd, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1638721625384478119, guid: e755cb3d51f072b4cb1a5605c3019acd, type: 3}
       propertyPath: m_RootOrder
@@ -1836,7 +1836,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1638721625384478127, guid: e755cb3d51f072b4cb1a5605c3019acd, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1638721625384647047, guid: e755cb3d51f072b4cb1a5605c3019acd, type: 3}
       propertyPath: m_Name
@@ -1848,7 +1848,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3810468053336476865, guid: e755cb3d51f072b4cb1a5605c3019acd, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3810468053336476865, guid: e755cb3d51f072b4cb1a5605c3019acd, type: 3}
       propertyPath: m_LocalPosition.x
